@@ -1,5 +1,6 @@
 using FluentAssertions;
 using GreetingApp.Terminal;
+using Microsoft.Extensions.Logging.Abstractions;
 using System;
 using Xunit;
 
@@ -13,8 +14,8 @@ namespace GreetingApp.Tests
             var writerMock = new WriterMock();
             var timeMock = DateTimeProviderMock.MorningProvider;
             var expected = string.Format("Good morning{0}", Environment.NewLine);
-
-            var sut = new GreetingService(writerMock, timeMock);
+            var nullLogger = NullLogger<GreetingService>.Instance;
+            var sut = new GreetingService(writerMock, timeMock, nullLogger);
 
             sut.Greet();
 
@@ -27,7 +28,8 @@ namespace GreetingApp.Tests
             var writerMock = new WriterMock();
             var timeMock = DateTimeProviderMock.AfternoonProvider;
             var expected = string.Format("Good afternoon{0}", Environment.NewLine);
-            var sut = new GreetingService(writerMock, timeMock);
+            var nullLogger = NullLogger<GreetingService>.Instance;
+            var sut = new GreetingService(writerMock, timeMock, nullLogger);
 
             sut.Greet();
 

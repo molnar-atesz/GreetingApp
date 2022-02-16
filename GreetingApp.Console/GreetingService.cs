@@ -1,4 +1,6 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using GreetingApp.Terminal.Infrastructure;
+using GreetingApp.Terminal.Interfaces;
+using Microsoft.Extensions.Logging;
 
 namespace GreetingApp.Terminal
 {

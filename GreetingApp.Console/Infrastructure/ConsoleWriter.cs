@@ -1,4 +1,6 @@
-﻿namespace GreetingApp.Terminal
+﻿using GreetingApp.Terminal.Interfaces;
+
+namespace GreetingApp.Terminal.Infrastructure
 {
     public class ConsoleWriter : IWriter
     {

@@ -1,4 +1,4 @@
-﻿namespace GreetingApp.Terminal
+﻿namespace GreetingApp.Terminal.Interfaces
 {
     public interface IWriter
     {

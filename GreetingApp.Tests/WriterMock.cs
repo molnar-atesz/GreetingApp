@@ -1,4 +1,4 @@
-﻿using GreetingApp.Terminal;
+﻿using GreetingApp.Terminal.Interfaces;
 using System;
 
 namespace GreetingApp.Tests

@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace GreetingApp.Terminal
+﻿namespace GreetingApp.Terminal.Infrastructure
 {
     public class DateTimeProvider
     {

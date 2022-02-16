@@ -29,9 +29,9 @@ namespace GreetingApp.Tests.Integration
         [Fact]
         public void Run_greet_in_the_afternoon()
         {
-            string expected = $"Good morning{Environment.NewLine}";
+            string expected = $"Good afternoon{Environment.NewLine}";
             var writerMock = new WriterMock();
-            var timeMock = DateTimeProviderMock.MorningProvider;
+            var timeMock = DateTimeProviderMock.AfternoonProvider;
             var nullLogger = NullLogger<GreetController>.Instance;
             var greetService = new GreetingService();
             var sut = new GreetController(greetService,
